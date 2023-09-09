@@ -1,0 +1,23 @@
+{
+    "name": "@jdeurt/lazy",
+    "scripts": {
+        "build": "bun build ./src/index.ts --outdir ./dist --minify && tsc",
+        "prepublishOnly": "build",
+        "test": "bun run build && bun test"
+    },
+    "files": [
+        "dist"
+    ],
+    "module": "dist/index.js",
+    "typings": "dist/types.d.ts",
+    "publishConfig": {
+        "access": "public"
+    },
+    "type": "module",
+    "devDependencies": {
+        "bun-types": "latest"
+    },
+    "peerDependencies": {
+        "typescript": "^5.0.0"
+    }
+}
