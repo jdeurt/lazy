@@ -2,7 +2,7 @@
     "name": "@jdeurt/lazy",
     "scripts": {
         "build": "bun build ./src/index.ts --outdir ./dist --minify && tsc",
-        "prepublishOnly": "build",
+        "prepublishOnly": "bun run build",
         "test": "bun run build && bun test"
     },
     "repository": {
