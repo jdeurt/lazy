@@ -46,3 +46,14 @@ test("lazy value resolution", async () => {
     expect(await array).toBeArray();
     expect(await signal).toBeUndefined();
 });
+
+test("timeout", async () => {
+    const bad = lazy();
+
+    const result = await bad
+        .withTimeout(100)
+        .then(() => true)
+        .catch(() => false);
+
+    expect(result).toBe(false);
+});

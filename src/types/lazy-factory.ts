@@ -1,7 +1,18 @@
 import type { Lazy } from "./lazy";
 
 interface LazyFactoryResolveFunction {
+    /**
+     * Resolves a lazy value.
+     *
+     * @throws A TypeError if `lazyValue` is not lazy.
+     */
     (lazyValue: Lazy<void>): void;
+
+    /**
+     * Resolves a lazy value.
+     *
+     * @throws A TypeError if `lazyValue` is not lazy.
+     */
     <T>(lazyValue: Lazy<T>, value: T | PromiseLike<T>): void;
 }
 

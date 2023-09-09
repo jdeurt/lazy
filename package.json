@@ -5,6 +5,9 @@
         "prepublishOnly": "build",
         "test": "bun run build && bun test"
     },
+    "repository": {
+        "url": "https://github.com/jdeurt/lazy"
+    },
     "files": [
         "dist"
     ],
